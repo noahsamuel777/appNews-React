@@ -14,7 +14,7 @@ const Home = ({name,convertArray,setConvertArray}) => {
 
 
   useEffect(()=>{
-      axios.get('https://newsapi.org/v2/everything?q=keyword&apiKey=3d2c2b51f4ce438f81dd3cb5175022c9')
+      axios.get('https://newsapi.org/v2/everything?q=keyword&apiKey=121184c38d2a4f49b55fcd683a109114')
       .then((res)=>setdata(res.data.articles))
   },[dataa])
 
