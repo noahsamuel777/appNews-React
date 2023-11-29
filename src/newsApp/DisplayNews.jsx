@@ -17,7 +17,7 @@ const DisplayNews = ({sendpropstoDisplaynews}) => {
     <div style={{ fontSize:'18px',}} > Author :  {sendpropstoDisplaynews.author}</div>
     <div style={{ fontSize:'15px',}} > Description :  {sendpropstoDisplaynews.description}</div>
     <div style={{ fontSize:'15px',}} > Description :  {sendpropstoDisplaynews.content}</div>
-    <div><span>Read more on : <a href={sendpropstoDisplaynews.url}>{sendpropstoDisplaynews.url}</a></span></div>
+    <div><span>Read more on : <a href={sendpropstoDisplaynews.url} target='_blank' rel='noreferrer' >"sendpropstoDisplaynews.url"</a></span></div>
     
     </div>
 
