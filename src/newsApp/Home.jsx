@@ -5,6 +5,7 @@ import axios from 'axios'
 import DisplayNews from './DisplayNews'
 
 // let mykey ="0ba45671ec9f4bc7aa0416bda11f2656"
+//let mykey2="121184c38d2a4f49b55fcd683a109114"
 const Home = ({name,convertArray,setConvertArray}) => {
   const[toLogin,setToLogin]=useState(false)
   const[SPTH,setSPTH]=useState(null)
@@ -14,7 +15,7 @@ const Home = ({name,convertArray,setConvertArray}) => {
 
 
   useEffect(()=>{
-      axios.get('https://newsapi.org/v2/everything?q=keyword&apiKey=121184c38d2a4f49b55fcd683a109114')
+      axios.get('https://newsapi.org/v2/everything?q=keyword&apiKey=0ba45671ec9f4bc7aa0416bda11f2656')
       .then((res)=>setdata(res.data.articles))
   },[dataa])
 
@@ -49,7 +50,7 @@ const Home = ({name,convertArray,setConvertArray}) => {
    ):( 
     <div style={{display:'flex', flexDirection:'column',justifyContent:'center', alignItems:'center',gap:'20px'}}>
     
-   <nav style={{height:'50px', display:'flex', justifyContent:'space-around', alignItems:'center',width:'100%', backgroundColor:'yellow',padding:'10px',marginTop:'50px'}}>
+   <nav style={{height:'50px', display:'flex', justifyContent:'space-around', alignItems:'center',width:'100%', backgroundColor:'yellow'}}>
       <div>
       <span ><h3 style={{color:'orangered'}}>Hi {name} welcome to Today News App </h3></span>
       </div>
@@ -105,7 +106,7 @@ const Home = ({name,convertArray,setConvertArray}) => {
 
 
 
-                                                          {transfer?(<DisplayNews sendpropstoDisplaynews={sendpropstoDisplaynews} />):(                               
+                                                          {transfer?(<DisplayNews settransfer={settransfer}  sendpropstoDisplaynews={sendpropstoDisplaynews} />):(                               
                                                             <div>
                                                             
                                                             <div style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',gap:'15px',padding:'10px'}}>
