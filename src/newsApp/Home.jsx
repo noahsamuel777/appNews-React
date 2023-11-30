@@ -6,6 +6,7 @@ import DisplayNews from './DisplayNews'
 
 // let mykey ="0ba45671ec9f4bc7aa0416bda11f2656"
 //let mykey2="121184c38d2a4f49b55fcd683a109114"
+//let mykey3="3d2c2b51f4ce438f81dd3cb5175022c9"
 const Home = ({name,convertArray,setConvertArray}) => {
   const[toLogin,setToLogin]=useState(false)
   const[SPTH,setSPTH]=useState(null)
@@ -15,7 +16,7 @@ const Home = ({name,convertArray,setConvertArray}) => {
 
 
   useEffect(()=>{
-      axios.get('https://newsapi.org/v2/everything?q=keyword&apiKey=0ba45671ec9f4bc7aa0416bda11f2656')
+      axios.get('https://newsapi.org/v2/everything?q=keyword&apiKey=3d2c2b51f4ce438f81dd3cb5175022c9')
       .then((res)=>setdata(res.data.articles))
   },[dataa])
 
